@@ -38,6 +38,10 @@ class LikeCreate(generics.CreateAPIView):
     queryset = Like.objects.all()
     serializer_class = LikeCreateSerializer
 
+class Discover(generics.ListAPIView):
+    queryset = Artwork.objects.all()
+    serializer_class = ArtworkSerializer
+
 
 # class CommentListInArtwork(generics.ListAPIView):
 #     queryset = ArtworkList.object.get(pk=self.kwargs.get('pk')).comments
